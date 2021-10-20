@@ -6,7 +6,7 @@
 /*   By: viforget <viforget@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 08:03:30 by viforget          #+#    #+#             */
-/*   Updated: 2021/10/19 18:24:39 by viforget         ###   ########.fr       */
+/*   Updated: 2021/10/20 08:56:35 by viforget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ void	select_index(int index, Contact	list[NB_CONTACT])
 	else
 	{
 		index--;
-		std::cout << list[index].get_first_name() << std::endl;
-		std::cout << list[index].get_last_name() << std::endl;
-		std::cout << list[index].get_nickname() << std::endl;
-		std::cout << list[index].get_phone_number() << std::endl;
-		std::cout << list[index].get_d_secret() << std::endl;
+		std::cout << "FIRST NAME    : " << list[index].get_first_name() << std::endl;
+		std::cout << "LAST NAME     : " << list[index].get_last_name() << std::endl;
+		std::cout << "NICKNAME      : " << list[index].get_nickname() << std::endl;
+		std::cout << "PHONE NUMBER  : " << list[index].get_phone_number() << std::endl;
+		std::cout << "DARKEST SECRET: " << list[index].get_d_secret() << std::endl;
 	}
 }
 
@@ -60,7 +60,7 @@ void	search_contact( Contact	list[NB_CONTACT] )
 		aff_contact(list[i], i);
 		i++;
 	}
-	std::cin >> buf;
+	std::getline(std::cin, buf);
 	select_index(atoi(buf.c_str()), list);
 }
 
@@ -75,19 +75,19 @@ int		add_contact(Contact	list[NB_CONTACT], int index)
 	std::string buf;
 
 	std::cout << "FIRST NAME: ";
-	std::cin >> buf;
+	std::getline(std::cin, buf);
 	list[index].set_first_name(buf);
 	std::cout << "LAST NAME: ";
-	std::cin >> buf;
+	std::getline(std::cin, buf);
 	list[index].set_last_name(buf);
 	std::cout << "NICKNAME: ";
-	std::cin >> buf;
+	std::getline(std::cin, buf);
 	list[index].set_nickname(buf);
 	std::cout << "PHONE NUMBER: ";
-	std::cin >> buf;
+	std::getline(std::cin, buf);
 	list[index].set_phone_number(buf);
 	std::cout << "TELL ME THEM DARKEST SECRET 👿 : ";
-	std::cin >> buf;
+	std::getline(std::cin, buf);
 	list[index].set_d_secret(buf);
 	list[index].set_is_set();
 	return ((index + 1) % NB_CONTACT);
@@ -103,7 +103,7 @@ int 	main()
 	while (1)
 	{
 		std::cout << ">";
-		std::cin >> buf;
+		std::getline(std::cin, buf);
 		if (!buf.compare("EXIT"))
 			return (0);
 		else if (!buf.compare("ADD"))
