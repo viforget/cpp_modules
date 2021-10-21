@@ -5,7 +5,8 @@ FLAGS = -Wall -Wextra -Werror
 CXX = @clang++ $(FLAGS)
 
 SRCS =	main.cpp\
-		Contact.class.cpp
+		Contact.class.cpp\
+		Phonebook.class.cpp
 
 OBJ = $(SRCS:%.cpp=%.o)
 
