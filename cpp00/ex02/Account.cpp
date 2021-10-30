@@ -1,13 +1,32 @@
 #include "Account.hpp"
 #include <iostream>
+#include <ctime>
+#include <iomanip>
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
+void	aff_timestamp()
+{
+	time_t	tim = std::time(NULL);
+	struct	tm * dt;
+
+	dt = localtime(&tim);
+	std::cout << '[' << dt->tm_year + 1900;
+	std::cout << std::setw(2) << std::setfill('0') << dt->tm_mon;
+	std::cout << std::setw(2) << std::setfill('0') << dt->tm_mday << '_';
+	std::cout << std::setw(2) << std::setfill('0') << dt->tm_hour;
+	std::cout << std::setw(2) << std::setfill('0') << dt->tm_min;
+	std::cout << std::setw(2) << std::setfill('0') << dt->tm_sec << "] ";
+}
+
 Account::Account( int deposit ) {
 	
+	aff_timestamp();
+	this->_nbWithdrawals = 0;
+	this->_nbDeposits = 0;
 	this->_amount = deposit;
 	this->_accountIndex = Account::_nbAccounts;
 	Account::_totalAmount += deposit;
@@ -18,6 +37,7 @@ Account::Account( int deposit ) {
 
 Account::~Account( void ) {
 
+	aff_timestamp();
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";closed" << std::endl;
 	return;
 }
@@ -44,11 +64,13 @@ int	Account::getNbWithdrawals( void )
 
 void	Account::displayAccountsInfos( void )
 {
+	aff_timestamp();
 	std::cout << "accounts:" << Account::_nbAccounts << ";total:" << Account::_totalAmount << ";deposits:" << Account::_totalNbDeposits << ";withdrawals:" << Account::_totalNbWithdrawals << std::endl;
 }
 
 void	Account::makeDeposit( int deposit )
 {
+	aff_timestamp();
 	this->_nbDeposits++;
 	Account::_totalNbDeposits++;
 	Account::_totalAmount += deposit;
@@ -60,6 +82,7 @@ void	Account::makeDeposit( int deposit )
 
 bool	Account::makeWithdrawal( int withdrawal )
 {
+	aff_timestamp();
 	std::cout << "index:" << this->_accountIndex << ";p_amount:" << this->_amount;
 	if (this->_amount < withdrawal)
 	{
@@ -78,5 +101,6 @@ bool	Account::makeWithdrawal( int withdrawal )
 
 void	Account::displayStatus( void ) const
 {
-		std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";deposits:" << this->_nbDeposits << ";withdrawals:" << this->_nbWithdrawals << std::endl;
+	aff_timestamp();
+	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";deposits:" << this->_nbDeposits << ";withdrawals:" << this->_nbWithdrawals << std::endl;
 }
