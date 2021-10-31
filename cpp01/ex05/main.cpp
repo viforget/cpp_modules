@@ -2,11 +2,11 @@
 
 int main()
 {
-    Karen ppl;
+	Karen ppl;
 
-    ppl.complain("DEBUG");
-    ppl.complain("INFO");
-    ppl.complain("WARNING");
-    ppl.complain("ERROR");
-    ppl.complain("BE KIND");
+	ppl.complain("DEBUG");
+	ppl.complain("INFO");
+	ppl.complain("WARNING");
+	ppl.complain("ERROR");
+	ppl.complain("BE KIND");
 }
