@@ -15,7 +15,7 @@ public:
 
 private:
 	int					value;
-	static const int	bitsf;
+	static const int	bitsf = 8;
 };
 
 #endif
