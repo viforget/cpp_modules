@@ -99,12 +99,14 @@ int 	main()
 	Phonebook	phonebook;
 	std::string	buf;
 	int			index = 0;
+	int 		r = 1;
 
 	aff_menu();
-	while (1)
+	while (r)
 	{
 		std::cout << ">";
-		std::getline(std::cin, buf);
+		if (!std::getline(std::cin, buf))
+			r = 0;
 		if (!buf.compare("EXIT"))
 			return (0);
 		else if (!buf.compare("ADD"))
