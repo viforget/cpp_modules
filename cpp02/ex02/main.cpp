@@ -6,6 +6,7 @@ int main(void) {
 	Fixed const	b(10);
 	Fixed const	c(42.42f);
 	Fixed const	d(b);
+	Fixed const e(Fixed(5.05f) * Fixed(2));
 
 	a = Fixed(1234.4321f);
 
@@ -51,6 +52,10 @@ int main(void) {
 	std::cout << a << std::endl;
 	std::cout << "decrementation after: " << a-- << std::endl;
 	std::cout << a << std::endl;
+
+	std::cout << std::endl;
+
+	std::cout << e << std::endl;
 
 	return 0;
 }
