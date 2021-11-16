@@ -23,6 +23,11 @@ public:
 	static const Fixed & max(const Fixed & a, const Fixed & b );
 	static const Fixed & min(const Fixed & a, const Fixed & b );
 
+	Fixed	operator++( int n );
+	Fixed	&operator++( void );
+	Fixed	operator--( int n );
+	Fixed	&operator--( void );
+
 private:
 	int					value;
 	static const int	bitsf = 8;
