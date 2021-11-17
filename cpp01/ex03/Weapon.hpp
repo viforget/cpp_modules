@@ -11,7 +11,7 @@ public:
 
 	void        setType(std::string type);
 
-	std::string get_type();
+	std::string const & get_type();
 
 private:
 	std::string type;

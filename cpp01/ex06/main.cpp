@@ -33,6 +33,8 @@ int main(int ac, char **av)
 			case 3:
 				std::cout << "[ ERROR ]" << std::endl;
 				break;
+			default:
+				break;
 		}		
 		ppl.complain(key[i]);
 		if (i != 3)
