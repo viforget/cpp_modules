@@ -38,6 +38,13 @@ int main(void) {
 
 	std::cout << std::endl;
 
+	if (a > b)
+		std::cout << "a is bigger than b" << std::endl;
+	if (a < b)
+		std::cout << "a is lower than b" << std::endl;
+
+	std::cout << std::endl;
+
 	std::cout << Fixed::max(a, b) << " is bigger than " << Fixed::min(a, b) << std::endl;
 	
 	std::cout << std::endl;

@@ -63,62 +63,62 @@ std::ostream&	operator<<( std::ostream &flux, Fixed const& nbF )
     return flux;
 }
 
-bool	operator<(Fixed const &a, Fixed const& b)
+bool	Fixed::operator<(Fixed const& b) const
 {
-	return (a.getRawBits() < b.getRawBits());
+	return (this->getRawBits() < b.getRawBits());
 }
 
-bool	operator>(Fixed const &a, Fixed const& b)
+bool	Fixed::operator>(Fixed const& b) const
 {
-	return (a.getRawBits() > b.getRawBits());
+	return (this->getRawBits() > b.getRawBits());
 }
 
-bool	operator<=(Fixed const &a, Fixed const& b)
+bool	Fixed::operator<=(Fixed const& b) const
 {
-	return (a.getRawBits() <= b.getRawBits());
+	return (this->getRawBits() <= b.getRawBits());
 }
 
-bool	operator>=(Fixed const &a, Fixed const& b)
+bool	Fixed::operator>=(Fixed const& b) const
 {
-	return (a.getRawBits() >= b.getRawBits());
+	return (this->getRawBits() >= b.getRawBits());
 }
 
-bool	operator==(Fixed const &a, Fixed const& b)
+bool	Fixed::operator==(Fixed const& b) const
 {
-	return (a.getRawBits() == b.getRawBits());
+	return (this->getRawBits() == b.getRawBits());
 }
 
-bool	operator!=(Fixed const &a, Fixed const& b)
+bool	Fixed::operator!=(Fixed const& b) const
 {
-	return (a.getRawBits() != b.getRawBits());
+	return (this->getRawBits() != b.getRawBits());
 }
 
-Fixed			operator+(Fixed const& a, Fixed const& b)
+Fixed	Fixed::operator+(Fixed const& b) const
 {
 	Fixed c(0);
 
-	c.setRawBits(a.getRawBits() + b.getRawBits());
+	c.setRawBits(this->getRawBits() + b.getRawBits());
 	return (c);
 }
 
-Fixed			operator-(Fixed const& a, Fixed const& b)
+Fixed	Fixed::operator-(Fixed const& b) const
 {
 	Fixed c(0);
 
-	c.setRawBits(a.getRawBits() - b.getRawBits());
+	c.setRawBits(this->getRawBits() - b.getRawBits());
 	return (c);
 }
 
-Fixed			operator*(Fixed const& a, Fixed const& b)
+Fixed	Fixed::operator*(Fixed const& b) const
 {
-	Fixed c(a.toFloat() * b.toFloat());
+	Fixed c(this->toFloat() * b.toFloat());
 
 	return (c);
 }
 
-Fixed			operator/(Fixed const& a, Fixed const& b)
+Fixed	Fixed::operator/(Fixed const& b) const
 {
-	Fixed c(a.toFloat() / b.toFloat());
+	Fixed c(this->toFloat() / b.toFloat());
 
 	return (c);
 }

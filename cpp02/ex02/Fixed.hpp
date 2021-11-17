@@ -23,6 +23,18 @@ public:
 	static const Fixed & max(const Fixed & a, const Fixed & b );
 	static const Fixed & min(const Fixed & a, const Fixed & b );
 
+	bool	operator<(Fixed const& b) const;
+	bool	operator>(Fixed const& b) const;
+	bool	operator<=(Fixed const& b) const;
+	bool	operator>=(Fixed const& b) const;
+	bool	operator==(Fixed const& b) const;
+	bool	operator!=(Fixed const& b) const;
+
+	Fixed	operator+(Fixed const& b) const;
+	Fixed	operator-(Fixed const& b) const;
+	Fixed	operator*(Fixed const& b) const;
+	Fixed	operator/(Fixed const& b) const;
+
 	Fixed	operator++( int n );
 	Fixed	&operator++( void );
 	Fixed	operator--( int n );
@@ -34,18 +46,8 @@ private:
 };
 
 std::ostream&	operator<<( std::ostream &flux, Fixed const& nbF );
+	
 
-bool			operator<(Fixed const &a, Fixed const& b);
-bool			operator>(Fixed const &a, Fixed const& b);
-bool			operator<=(Fixed const &a, Fixed const& b);
-bool			operator>=(Fixed const &a, Fixed const& b);
-bool			operator==(Fixed const &a, Fixed const& b);
-bool			operator!=(Fixed const &a, Fixed const& b);
-
-Fixed			operator+(Fixed const& a, Fixed const& b);
-Fixed			operator-(Fixed const& a, Fixed const& b);
-Fixed			operator*(Fixed const& a, Fixed const& b);
-Fixed			operator/(Fixed const& a, Fixed const& b);
 
 
 #endif
