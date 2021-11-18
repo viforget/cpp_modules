@@ -6,7 +6,8 @@ CXX = @clang++ $(FLAGS)
 
 SRCS =	main.cpp\
 		Fixed.cpp\
-		Point.cpp
+		Point.cpp\
+		bsp.cpp\
 
 OBJ = $(SRCS:%.cpp=%.o)
 

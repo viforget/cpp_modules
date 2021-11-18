@@ -54,7 +54,6 @@ int		Fixed::toInt(void) const
 void	Fixed::operator= ( Fixed const &a )
 {
 	this->value = a.getRawBits();
-
 }
 
 std::ostream&	operator<<( std::ostream &flux, Fixed const& nbF )

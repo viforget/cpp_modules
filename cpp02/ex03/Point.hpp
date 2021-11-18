@@ -11,7 +11,7 @@ public:
 	Point( Fixed const x, Fixed const y );
 	~Point( void );
 
-	void operator= ( Point const &a );
+	Point	&	operator= ( Point &a );
 
 	Fixed	get_x() const;
 	Fixed	get_y() const;
