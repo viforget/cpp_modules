@@ -2,7 +2,7 @@ NAME = megaphone
 
 FLAGS = -Wall -Wextra -Werror
 
-CC = @clang++ $(FLAGS)
+CXX = @clang++ $(FLAGS)
 
 SRCS =	megaphone.cpp
 
@@ -11,7 +11,7 @@ OBJ = $(SRCS:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-			$(CC) $(OBJ) -o $(NAME)
+			$(CXX) $(OBJ) -o $(NAME)
 			@echo "\033[32mCOMPILATION OK\033[0m"
 			
 clean:
