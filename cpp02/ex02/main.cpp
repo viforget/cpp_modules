@@ -50,15 +50,15 @@ int main(void) {
 	std::cout << std::endl;
 
 	a = 0;
-	std::cout << a << std::endl;
+	std::cout << a << " " << a.getRawBits() << std::endl;
 	std::cout << "incrementation before: " << ++a << std::endl;
-	std::cout << a << std::endl;
+	std::cout << a << " " << a.getRawBits() << std::endl;
 	std::cout << "incrementation after: " << a++ << std::endl;
-	std::cout << a << std::endl;
+	std::cout << a << " " << a.getRawBits() << std::endl;
 	std::cout << "decrementation before: " << --a << std::endl;
-	std::cout << a << std::endl;
+	std::cout << a << " " << a.getRawBits() << std::endl;
 	std::cout << "decrementation after: " << a-- << std::endl;
-	std::cout << a << std::endl;
+	std::cout << a << " " << a.getRawBits() << std::endl;
 
 	std::cout << std::endl;
 

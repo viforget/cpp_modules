@@ -1,4 +1,4 @@
-NAME = canon2
+NAME = canon3
 
 FLAGS = -Wall -Wextra -Werror
 
