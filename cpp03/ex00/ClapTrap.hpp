@@ -14,8 +14,8 @@ public:
 
 private:
 	std::string _name;
-	int			_hitpoint;
-	int			_energy_point;
+	int			_hitpoint; //HP
+	int			_energy_point; //
 	int			_attack_damage;
 
 };
