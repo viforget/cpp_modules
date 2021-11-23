@@ -15,6 +15,7 @@ ClapTrap::ClapTrap( std::string const name, int hitpoint, int energy_point, int 
 
 ClapTrap::~ClapTrap()
 {
+	std::cout << "End of ClapTrap" << std::endl;
 	return;
 }
 

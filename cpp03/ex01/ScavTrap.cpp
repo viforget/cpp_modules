@@ -7,6 +7,7 @@ ScavTrap::ScavTrap( std::string const name ) : ClapTrap( name, 100, 50, 200) {
 
 ScavTrap::~ScavTrap()
 {
+	std::cout << "End of ScavTrap" << std::endl;
 	return;
 }
 
