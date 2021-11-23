@@ -1,7 +1,7 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap( std::string const name ) : ClapTrap( name, 100, 50, 200) {
+ScavTrap::ScavTrap( std::string const name ) : ClapTrap( name, 100, 50, 20) {
 	std::cout << "I am a ScavTrap" << std::endl;
 }
 
