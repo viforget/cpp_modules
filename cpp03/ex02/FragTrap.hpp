@@ -11,7 +11,8 @@ public:
 	FragTrap( std::string const name );
 	~FragTrap( void );
 
-	void highFivesGuy( void );
+	void	attack(std::string const & target);
+	void	highFivesGuy( void );
 	
 private:
 
