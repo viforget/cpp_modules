@@ -7,7 +7,6 @@ class	ClapTrap {
 
 public:
 	ClapTrap( std::string const name );
-	ClapTrap( std::string const name, int hitpoint, int energy_point, int attack_damage );
 	~ClapTrap( void );
 	void	attack(std::string const & target);
 	void	takeDamage(unsigned int amount);
@@ -18,6 +17,7 @@ protected:
 	int			_hitpoint; //HP
 	int			_energy_point; //
 	int			_attack_damage;
+	ClapTrap( std::string const name, int hitpoint, int energy_point, int attack_damage );
 
 };
 
