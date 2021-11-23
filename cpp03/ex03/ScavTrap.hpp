@@ -11,7 +11,8 @@ public:
 	ScavTrap( std::string const name );
 	~ScavTrap( void );
 
-	void guardGate( void );
+	void	attack(std::string const & target);
+	void	guardGate( void );
 	
 private:
 
