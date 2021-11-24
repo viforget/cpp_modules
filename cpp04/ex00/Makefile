@@ -8,6 +8,9 @@ SRCS =	main.cpp\
 		src/Animal.class.cpp\
 		src/Cat.class.cpp\
 		src/Dog.class.cpp\
+		src/WrongAnimal.class.cpp\
+		src/WrongCat.class.cpp\
+		src/WrongDog.class.cpp\
 
 OBJ = $(SRCS:%.cpp=%.o)
 
