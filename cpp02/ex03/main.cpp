@@ -10,7 +10,10 @@ int main()
 	Point c(6, 1);
 	Point p(3, 4);
 	Point q(1, 1);
+	Point r(2, 3);
 
 	std::cout << bsp(a, b, c, p) << std::endl;
 	std::cout << bsp(a, b, c, q) << std::endl;
+	std::cout << bsp(a, b, c, a) << std::endl;
+	std::cout << bsp(a, b, c, r) << std::endl;
 }

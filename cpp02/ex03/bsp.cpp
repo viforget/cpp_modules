@@ -15,7 +15,8 @@ bool	bsp(Point a, Point b, Point c, Point p)
     d1 = sign(p, a, b);
     d2 = sign(p, b, c);
     d3 = sign(p, c, a);
-
+	if (d1 == 0 || d2 == 0 || d3 == 0)
+		return (0);
     has_neg = (d1 < 0) || (d2 < 0) || (d3 < 0);
     has_pos = (d1 > 0) || (d2 > 0) || (d3 > 0);
 
