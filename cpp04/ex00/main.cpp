@@ -19,6 +19,7 @@ int main()
 		cat->makeSound();
 		dog->makeSound();
 		delete cat;
+		delete dog;
 		delete animal;
 	}
 	std::cout << "-------------------" << std::endl;
