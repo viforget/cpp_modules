@@ -1,4 +1,4 @@
-NAME = Private_reference_that_I_dont_t_know
+NAME = Smart_Dogs_and_Cats
 
 FLAGS = -Wall -Wextra -Werror -I inc
 
@@ -6,6 +6,11 @@ CXX = @clang++ $(FLAGS)
 
 SRCS =	main.cpp\
 		src/AMateria.class.cpp\
+		src/Ice.class.cpp\
+		src/ICharacter.class.cpp\
+		src/IMateriaSource.class.cpp\
+		src/Character.class.cpp\
+		src/MateriaSource.class.cpp
 
 OBJ = $(SRCS:%.cpp=%.o)
 
