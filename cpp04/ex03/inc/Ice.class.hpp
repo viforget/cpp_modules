@@ -1,6 +1,8 @@
 #ifndef ICE_CLASS_HPP
 # define ICE_CLASS_HPP
 
+#include "AMateria.class.hpp"
+
 class	Ice : public AMateria {
 
 protected:

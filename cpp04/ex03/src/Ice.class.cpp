@@ -1,23 +1,23 @@
 #include "Ice.class.hpp"
 
-Ice::Ice() _type("ice")
+Ice::Ice() : AMateria("ice")
 {
-	return ();
+	return ;
 }
 
-Ice::Ice()
+Ice::~Ice()
 {
 	return;
 }
 
-AMateria* clone() const
+AMateria* Ice::clone() const
 {
-	AMateria	cpy(this->_type);
+	Ice *ret = new Ice;
 
-	return (cpy);
+	return (ret);
 }
 
-void use(ICharacter& target)
+void Ice::use(ICharacter& target)
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *";	
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;	
 }

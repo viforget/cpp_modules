@@ -6,7 +6,7 @@ Character::Character( std::string const & name ) : _name(name)
 	{
 		this->_inv[i] = NULL;
 	}
-	return();
+	return;
 }
 
 Character::~Character()
@@ -14,18 +14,18 @@ Character::~Character()
 	return ;
 }
 
-std::string const & getName() const
+std::string const & Character::getName() const
 {
 	return (this->_name);
 }
 
-void use(int idx, ICharacter& target)
+void 				Character::use(int idx, ICharacter& target)
 {
 	if (this->_inv[idx])
 		this->_inv[idx]->use(target);
 }
 
-void 				equip(AMateria* m)
+void 				Character::equip(AMateria* m)
 {
 	int i = 0;
 
@@ -35,7 +35,7 @@ void 				equip(AMateria* m)
 		this->_inv[i] = m;
 }
 
-void 				unequip(int idx)
+void 				Character::unequip(int idx)
 {
 	this->_inv[idx] = NULL;
 }

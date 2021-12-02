@@ -1,4 +1,4 @@
-NAME = Smart_Dogs_and_Cats
+NAME = FF7
 
 FLAGS = -Wall -Wextra -Werror -I inc
 
@@ -7,6 +7,7 @@ CXX = @clang++ $(FLAGS)
 SRCS =	main.cpp\
 		src/AMateria.class.cpp\
 		src/Ice.class.cpp\
+		src/Cure.class.cpp\
 		src/ICharacter.class.cpp\
 		src/IMateriaSource.class.cpp\
 		src/Character.class.cpp\

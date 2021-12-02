@@ -2,15 +2,15 @@
 
 AMateria::AMateria(std::string const & type) : _type(type)
 {
-	return ();
+	return ;
 }
 
 AMateria::~AMateria()
 {
-	return();
+	return ;
 }
 
-AMateria::std::string const & getType() const
+std::string const & AMateria::getType() const
 {
 	return (_type);
 }

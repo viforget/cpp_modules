@@ -1,5 +1,6 @@
 #include "AMateria.class.hpp"
 #include "Ice.class.hpp"
+#include "Cure.class.hpp"
 #include "ICharacter.class.hpp"
 #include "Character.class.hpp"
 #include "IMateriaSource.class.hpp"
@@ -10,14 +11,14 @@ int main()
 	IMateriaSource* src = new MateriaSource();
 	
 	src->learnMateria(new Ice());
-	//src->learnMateria(new Cure());
+	src->learnMateria(new Cure());
 	
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
 	
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	//tmp = src->createMateria("cure");
+	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	
 	ICharacter* bob = new Character("bob");
