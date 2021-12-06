@@ -9,6 +9,13 @@ Character::Character( std::string const & name ) : _name(name)
 	return;
 }
 
+Character::Character( Character & cp ) : _name(cp.getName())
+{
+	for (int i = 0; i < 4; i++)
+		this->_inv[i] = cp.getInv(i);
+	return;
+}
+
 Character::~Character()
 {
 	return ;
@@ -38,4 +45,11 @@ void 				Character::equip(AMateria* m)
 void 				Character::unequip(int idx)
 {
 	this->_inv[idx] = NULL;
+}
+
+AMateria *			Character::getInv(int idx )
+{
+	if (idx >= 0 && idx < 4 )
+		return (this->_inv[idx]);
+	return (NULL);
 }

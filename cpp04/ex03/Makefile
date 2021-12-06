@@ -8,8 +8,6 @@ SRCS =	main.cpp\
 		src/AMateria.class.cpp\
 		src/Ice.class.cpp\
 		src/Cure.class.cpp\
-		src/ICharacter.class.cpp\
-		src/IMateriaSource.class.cpp\
 		src/Character.class.cpp\
 		src/MateriaSource.class.cpp
 
