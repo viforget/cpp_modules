@@ -1,6 +1,6 @@
 #include "Form.hpp"
 
-Form::Form() : _name("untitled file"), _sign(0), _grade(150)
+Form::Form() : _name("untitled file"), _sign(0), _grade(150), _grade_ex(150)
 {
 	return;
 }
@@ -10,17 +10,22 @@ Form::~Form()
 	return;
 }
 
-Form::Form(Form const & cpy) : _name(cpy.getName()), _sign(cpy.getSign()), _grade(cpy.getGrade())
+Form::Form(Form const & cpy) : _name(cpy.getName()), _sign(cpy.getSign()), _grade(cpy.getGrade()), _grade_ex(cpy.getGradeEx())
 {
 	return;
 }
 
-Form::Form( std::string const & name, int grade) : _name(name), _sign(0), _grade(grade)
+Form::Form( std::string const & name, int grade) : _name(name), _sign(0), _grade(grade), _grade_ex(150)
 {
 	return;
 }
 
-Form::Form( std::string const & name) : _name(name), _sign(0), _grade(150)
+Form::Form( std::string const & name, int grade, int grade_ex) : _name(name), _sign(0), _grade(grade), _grade_ex(grade_ex)
+{
+	return;
+}
+
+Form::Form( std::string const & name) : _name(name), _sign(0), _grade(150), _grade_ex(150)
 {
 	return;
 }
@@ -38,6 +43,11 @@ bool				Form::getSign() const
 int 				Form::getGrade() const
 {
 	return (this->_grade);
+}
+
+int 				Form::getGradeEx() const
+{
+	return (this->_grade_ex);
 }
 
 void 				Form::operator= ( Bureaucrat const &a )

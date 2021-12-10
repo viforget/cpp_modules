@@ -12,6 +12,7 @@ public:
 	~Form( void );
 	Form( Form const & cpy );
 	Form( std::string const & name, int grade );
+	Form( std::string const & name, int grade, int grade_ex);
 	Form( std::string const & name );
 
 	void	operator= ( Bureaucrat const & a );
@@ -19,6 +20,7 @@ public:
 	std::string const	getName() const;
 	bool				getSign() const;
 	int 				getGrade() const;
+	int 				getGradeEx() const;
 
 	class	GradeTooHighException : public std::exception
 	{
@@ -38,6 +40,7 @@ private:
 	std::string const	_name;
 	bool				_sign;
 	int const			_grade;
+	int const			_grade_ex;
 
 };
 
