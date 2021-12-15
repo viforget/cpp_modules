@@ -1,7 +1,6 @@
 #include "Base.hpp"
 #include "ABC.hpp"
 # include <iostream>
-# include <cstdlib>
 
 Base *	generate(void)
 {
