@@ -65,4 +65,5 @@ int main()
 	a = generate();
 	identify(a);
 	identify(*a);
+	delete a;
 }
