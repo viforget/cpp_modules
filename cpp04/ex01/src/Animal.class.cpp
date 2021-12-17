@@ -2,13 +2,13 @@
 
 Animal::Animal()
 {
-	std::cout << "I am an animal" << std::endl;
+	std::cout << "<An animal is born>" << std::endl;
 	return;
 }
 
 Animal::~Animal()
 {
-	std::cout << "I am no longer an animal" << std::endl;
+	std::cout << "<An animal is unborn>" << std::endl;
 	return;
 }
 

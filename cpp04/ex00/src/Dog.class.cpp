@@ -2,12 +2,14 @@
 
 Dog::Dog()
 {
+	std::cout << "Hello I am a dog" << std::endl;
 	this->type = "Dog";
 	return;
 }
 
 Dog::~Dog()
 {
+	std::cout << "Goddbye I was a dog" << std::endl;
 	return;
 }
 
