@@ -2,7 +2,7 @@
 # define ITER_HPP
 
 template < typename T >
-void	iter(T * array, int lenght, void f(T & e))
+void	iter(T * array, int lenght, void f(T const & e))
 {
 	for (int i = 0; i < lenght; i++)
 	{
