@@ -14,7 +14,7 @@ int	easyfind(T const & cont, int nb)
 			return(*it);
 		it++;
 	}
-	throw(std::exception());
+	throw(std::out_of_range("number not found"));
 }
 
 #endif
