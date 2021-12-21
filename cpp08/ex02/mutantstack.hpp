@@ -16,7 +16,25 @@ public:
 	}
 	typedef T * iterator;
 
-	iterator	begin();
+	iterator	begin()
+	{
+		iterator	it;
+		std::stack<T>	st;
+		while (!this->empty())
+		{
+			st.push(this->top());
+			this->pop();
+		}
+		this->push(st.top());
+		it = &(this->top());
+		st.pop();
+		while (!st.empty())
+		{
+			this->push(st.top());
+			st.pop();
+		}
+		return(it);
+	}
 	iterator	end()
 	{
 		return(&this->top() + 1);
