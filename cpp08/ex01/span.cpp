@@ -27,7 +27,7 @@ Span::Span( Span const & ref) : _N(ref.size()), _fill(0)
 Span::Span( unsigned int n ) : _N(n), _fill(0)
 {
 	this->_ar = new int[n];
-	for (int i = 0; i < n; i++)
+	for (unsigned int i = 0; i < n; i++)
 		this->_ar[i] = 0;
 	return;
 }
@@ -79,9 +79,9 @@ int				Span::shortestSpan()
 	if (this->_fill <= 1)
 		throw(std::length_error("Span is too short"));
 	int gap = abs(this->_ar[0] - this->_ar[1]);
-	for (int i = 0; i < this->_fill; i++)
+	for (unsigned int i = 0; i < this->_fill; i++)
 	{
-		for (int j = i + 1; j < this->_fill; j++)
+		for (unsigned int j = i + 1; j < this->_fill; j++)
 		{
 			gap = gap > abs(this->_ar[i] - this->_ar[j]) ? abs(this->_ar[i] - this->_ar[j]) : gap;
 		}
@@ -94,9 +94,9 @@ int				Span::longestSpan()
 	if (this->_fill <= 1)
 		throw(std::length_error("Span is too short"));
 	int gap = abs(this->_ar[0] - this->_ar[1]);
-	for (int i = 0; i < this->_fill; i++)
+	for (unsigned int i = 0; i < this->_fill; i++)
 	{
-		for (int j = i + 1; j < this->_fill; j++)
+		for (unsigned int j = i + 1; j < this->_fill; j++)
 		{
 			gap = gap < abs(this->_ar[i] - this->_ar[j]) ? abs(this->_ar[i] - this->_ar[j]) : gap;
 		}

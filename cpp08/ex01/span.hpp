@@ -20,9 +20,9 @@ public:
 	int				longestSpan();
 
 private:
-	unsigned int	_fill;
 	unsigned int	_N;
 	int *			_ar;
+	unsigned int	_fill;
 
 };
 
